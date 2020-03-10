@@ -36,3 +36,6 @@ Temporary Items
 
 # Jupyter Notebooks
 .ipynb_checkpoints
+
+# Local Netlify folder
+.netlify
