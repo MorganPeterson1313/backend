@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['mud-production.herokuapp.com', 'csp5.herokuapp.com', '127.0.0.1','pacmanadventure.netlify.com', 'pacmanadventureland.herokuapp.com']
+ALLOWED_HOSTS = ['pacmanadventure.netlify.com', 'pacmanadventureland.herokuapp.com','127.0.0.1',]
 
 
 # Application definition
@@ -147,6 +147,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 import django_heroku
