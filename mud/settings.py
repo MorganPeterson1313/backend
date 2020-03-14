@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['pacmanadventureland.herokuapp.com','pacmanadventure.netlify.com', '127.0.0.1',]
+ALLOWED_HOSTS = ['pacmanadventureland.herokuapp.com', 'pacmanadventure.netlify.com', '127.0.0.1',]
 
 
 # Application definition
@@ -150,6 +150,8 @@ USE_TZ = True
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+CORS_ORIGIN_WHITELIST = 'pacmanadventure.netlify.com',
 
 import django_heroku
 django_heroku.settings(locals())
