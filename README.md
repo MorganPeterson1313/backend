@@ -28,7 +28,7 @@ curl -X GET -H 'Authorization: Token dc2b4cea32402aa0ad1985355a52a05d2248e67e' h
 
 ## Django Migrate On Herokuapp
 ```bash
-heroku run python manage.py makemigrations
+heroku run python manage.py makemigrationss
 heroku run python manage.py migrate
 heroku run python manage.py create_world
 ```
