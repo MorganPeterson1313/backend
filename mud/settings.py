@@ -155,4 +155,4 @@ STATIC_URL = '/static/'
 import django_heroku
 django_heroku.settings(locals())
 
-CORS_ORIGIN_WHITELIST = ['https://pacmanadventureland.herokuapp.com']
+CORS_ORIGIN_WHITELIST = ['https://pacmanadventureland.herokuapp.com','https://pacmanadventure.netlify.com' ]
