@@ -55,10 +55,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SITE_ID = 1
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -134,7 +134,7 @@ REST_FRAMEWORK = {
 
 
 CORS_ORIGIN_WHITELIST = [
-    'https://pacmanadventureland.herokuapp.com',
+    'https://pacmanadventureland.herokuapp.com', 'http://localhost:3000',
     ]
 
 # Internationalization
