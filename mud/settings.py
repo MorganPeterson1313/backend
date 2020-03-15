@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'mud.urls'
 
@@ -131,7 +131,9 @@ REST_FRAMEWORK = {
 }
 
 
-#CORS_ORIGIN_WHITELIST = 'https://pacmanadventureland.herokuapp.com','localhost:3000'
+CORS_ORIGIN_WHITELIST = [
+    'https://pacmanadventureland.herokuapp.com',
+    ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
@@ -157,5 +159,12 @@ STATIC_URL = '/static/'
 
 import django_heroku
 django_heroku.settings(locals())
+
+from corsheaders.signals import check_request_enabled
+
+def cors_allow_api_to_everyone(sender, request, **kwargs):
+    return request.path.startswith('/api/')
+
+check_request_enabled.connect(cors_allow_api_to_everyone)
 
 
