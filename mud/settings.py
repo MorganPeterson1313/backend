@@ -67,7 +67,7 @@ MIDDLEWARE = [
 
 
 
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'mud.urls'
 
@@ -133,9 +133,9 @@ REST_FRAMEWORK = {
 }
 
 
-CORS_ORIGIN_WHITELIST = [
-    'https://pacmanadventureland.herokuapp.com', 'http://localhost:3000',
-    ]
+# CORS_ORIGIN_WHITELIST = [
+#     'https://pacmanadventureland.herokuapp.com', 'http://localhost:3000',
+#     ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
