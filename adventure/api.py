@@ -12,7 +12,7 @@ import json
 # pusher = Pusher(app_id=config('PUSHER_APP_ID'), key=config('PUSHER_KEY'), secret=config('PUSHER_SECRET'), cluster=config('PUSHER_CLUSTER'))
 
 @csrf_exempt
-@api_view(["POST"])
+@api_view(["GET"])
 def initialize(request):
     user = request.user
     player = user.player
